@@ -1,5 +1,43 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "查看FGO储存大小":{
+        "recognition":"TemplateMatch",
+        "template": "Snipaste_2024-05-28_17-19-56.png",
+        "action": "Click",
+        "next":[
+            "查看储存大小"
+        ]
+    },
+    "查看储存大小":{
+        "recognition": "OCR",
+        "expected": "存储",
+        "action": "Click",
+        "next":[
+            "向下滑动"
+        ]
+   },
+   "向下滑动":{
+        "action": "Swipe",
+        "begin":[
+            100,400,10,10
+        ],
+        "end": [
+            100,100,10,10
+        ],
+        "next":[
+            "查看游戏"
+        ]
+   },
+   "查看游戏":{
+        "recognition": "OCR",
+        "expected": "游戏",
+        "action": "Click",
+        "next":[
+            "查看FGO"
+        ]
+   },
+   "查看FGO":{
+        "recognition":"TemplateMatch",
+        "template": "Snipaste_2024-05-28_17-11-55.png",
+        "action": "Click"
+   }
 }
